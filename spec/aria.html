@@ -7,15 +7,6 @@
 <script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
 <!-- <script src='http://pandora.aptest.com/respec/js/require.js' data-main="http://pandora.aptest.com/respec/js/profile-w3c-common" async class='remove'></script> -->
 <link href="spec.css" rel="stylesheet" type="text/css"/>
-<style type="text/css">
-.aref { 
-	font-family: monospace; 
-	font-weight: bold; 
-	color: #ff4500 !important;
-}
-.property-reference, .role-reference, .state-reference { font-family: monospace; };
-
-</style>
 <script class="remove" src="aria.js"></script>
 <script class="remove">
 	var respecConfig = {
@@ -1257,7 +1248,11 @@
 					</tr>
 					<tr>
 						<th class="role-required-properties-head">Required States and Properties:</th>
-						<td class="role-required-properties"><sref>aria-checked</sref></td>
+						<td class="role-required-properties">
+							<ul>
+								<li><sref>aria-checked</sref></li>
+							</ul>
+						</td>
 					</tr>
 					<tr>
 						<th class="role-properties-head" scope="row">Supported States and Properties:</th>
@@ -4274,7 +4269,6 @@
 						<th class="role-properties-head" scope="row">Supported States and Properties:</th>
 						<td class="role-properties">
 							<ul>
-								<li><sref>aria-checked</sref></li>
 								<li><pref>aria-posinset</pref></li>
 								<li><sref>aria-selected</sref></li>
 								<li><pref>aria-setsize</pref></li>
@@ -4566,10 +4560,11 @@
 					</tr>
 					<tr>
 						<th class="role-parent-head" scope="row">Superclass Role:</th>
-						<td class="role-parent"><ul>
-							<li><rref>checkbox</rref></li>
-							<li><rref>option</rref></li>
-						</ul></td>
+						<td class="role-parent">
+							<ul>
+								<li><rref>checkbox</rref></li>
+							</ul>
+						</td>
 					</tr>
 					<tr>
 						<th class="role-children-head" scope="row">Subclass Roles:</th>
@@ -4593,11 +4588,20 @@
 					</tr>
 					<tr>
 						<th class="role-required-properties-head">Required States and Properties:</th>
-						<td class="role-required-properties"> </td>
+						<td class="role-required-properties">
+							<ul>
+								<li><sref>aria-checked</sref></li>
+							<ul>
+						</td>
 					</tr>
 					<tr>
 						<th class="role-properties-head" scope="row">Supported States and Properties:</th>
-						<td class="role-properties"> </td>
+						<td class="role-properties">
+							<ul>
+								<li><pref>aria-posinset</pref></li>
+								<li><pref>aria-setsize</pref></li>
+							<ul>
+						</td>
 					</tr>
 					<tr>
 						<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
@@ -6168,7 +6172,13 @@
 					</tr>
 					<tr>
 						<th class="role-properties-head" scope="row">Supported States and Properties:</th>
-						<td class="role-properties"><sref>aria-selected</sref></td>
+						<td class="role-properties">
+							<ul>
+								<li><pref>aria-posinset</pref></li>
+								<li><sref>aria-selected</sref></li>
+								<li><pref>aria-setsize</pref></li>
+							<ul>
+						</td>
 					</tr>
 					<tr>
 						<th class="role-inherited-head" scope="row">Inherited States and Properties:</th>
@@ -9470,6 +9480,9 @@ PUBLIC "-//W3C//ENTITIES XHTML ARIA Attributes 1.0//EN" "aria-attributes-1.mod"
 			<li>17-Sept-2013: Added non-default value (<code>false</code>) for <sref>aria-checked</sref> to checkable widget roles: <rref>checkbox</rref>, <rref>menuitemcheckbox</rref>, <rref>menuitemradio</rref>, and <rref>radio</rref>.</li>
 			<li>17-Sept-2013: Added first draft of <pref>aria-describedat</pref> after much group deliberation.</li>
 			<li>17-Sept-2013: Added <a href="#valuetype_uri">URI</a> value type.</li>
+			<li>April-2014: Converted ARIA source to ReSpec format.</li>
+			<li>19-May-2014: <rref>radio</rref> no longer inherits from <rref>option</rref>, just from <rref>checkbox</rref>. <rref>radio</rref> now adds <pref>aria-posinset</pref> and <pref>aria-setsize</pref>. <rref>option</rref> role no longer has <sref>aria-checked</sref>.</li>
+			<li>19-May-2014: Added <pref>aria-posinset</pref> and <pref>aria-setsize</pref> to <rref>tab</rref>.</li>
 		</ul>
 	</section>
 </section>
